@@ -32,7 +32,7 @@ A public lab website that:
 - **Organization:** `vdl-odu` (public). At least two owners, Katie and Gul, with two-factor authentication required.
 - **Repository:** `vdl-odu/vdl-odu.github.io` (public).
 - **Branches:** build on the `prototype` branch. Pushing to `main` publishes the site, so nothing merges to `main` until launch (Milestone 5).
-- **Pages:** after the first deploy, Settings, Pages, Source: **Deploy from a branch**, Branch: `gh-pages` (al-folio's deploy workflow writes that branch).
+- **Pages:** until launch, Settings, Pages, Source stays on **GitHub Actions**. This switches off GitHub's built-in Jekyll builder, which cannot build al-folio (it fails with "The al_folio_core theme could not be found"). At launch the source changes to `gh-pages` (see Milestone 5).
 - **Optional later:** a custom address such as an odu.edu subdomain, if ODU IT will add the DNS record.
 
 ## 3. Content rules (apply to every page)
@@ -75,11 +75,11 @@ Work one milestone per branch, following the developer handbook's Git workflow (
 
 ### Milestone 0: Run the scaffold (about 2 hours)
 
-The repo already holds a scaffold (Milestones 1 and 2 below, drafted 2026-11-11) on al-folio v1.2. It has **not been built yet**, because the build tools were not available where it was drafted.
+The repo already holds a scaffold (Milestones 1 and 2 below, drafted 2026-11-11) on al-folio v1.2. **The CI build passes** (Deploy site workflow on the draft pull request, 2026-11-11, after setting `ruby-version: "3.3"`). Nobody has seen the rendered pages yet.
 
 - Run it locally with Docker (`docker compose pull`, then `docker compose up`).
-- Fix any build errors. Likely spots: the removed example content and features (blog, CV, books, teaching) and the empty `papers.bib`.
-- Check each page in the navigation renders.
+- Fix any errors or warnings the local build shows.
+- Check each page in the navigation renders, in light mode, dark mode and at phone width.
 
 **Done means:** the site builds with no errors and every page in section 4 loads locally.
 
@@ -125,7 +125,11 @@ The repo already holds a scaffold (Milestones 1 and 2 below, drafted 2026-11-11)
 
 - Katie fills in or approves all `[TODO: Katie]` items.
 - Confirm approvals: each sponsor or partner name and logo, each team member's opt-in, ODU branding.
-- Move to the public location decided in section 2 and launch.
+- Launch:
+  1. Merge `prototype` into `main`. The Deploy site workflow builds the site and writes it to the `gh-pages` branch.
+  2. Wait for that run to succeed, so the `gh-pages` branch exists.
+  3. Settings, Pages, Build and deployment, Source: **Deploy from a branch**, Branch: `gh-pages`, folder `/ (root)`. Save.
+  4. Open https://vdl-odu.github.io/ after a few minutes and check every page.
 
 **Done means:** the site is live at its public URL and no `[TODO` strings remain (search the repo for them).
 

@@ -76,6 +76,9 @@ al_folio:
       enabled: true
   compat:
     bootstrap:
+      # Keep false: enabling loads bootstrap-compat.css `.collapse { visibility: hidden }`,
+      # which hides the desktop navbar (class includes `collapse`). bib.liquid still has a
+      # Bootstrap data-toggle marker; that only warns, and al-folio has a vanilla popover fallback.
       enabled: false
       support_window: v1.0-v1.2
       deprecates_in: v1.3
