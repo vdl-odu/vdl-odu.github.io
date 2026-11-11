@@ -1,0 +1,22 @@
+<style>
+  /* [TODO: Katie] confirm hex values against the ODU Brand Guidelines (Monarch Blue and a secondary color that passes WCAG AA). */
+  :root {
+    --vdl-lab-staff: #003057; /* Monarch Blue (provisional) */
+    --vdl-lab-student: #4a5a6a; /* provisional */
+  }
+  html[data-theme="dark"] {
+    --vdl-lab-staff: #98c5ea; /* light blue for dark backgrounds (provisional) */
+    --vdl-lab-student: #c3ccd5; /* provisional */
+  }
+  .publications .author .lab-faculty,
+  .publications .author .lab-staff {
+    font-weight: 700;
+    color: var(--vdl-lab-staff);
+  }
+  .publications .author .lab-student {
+    font-style: italic;
+    color: var(--vdl-lab-student);
+  }
+  .vdl-author-legend .lab-faculty { font-weight: 700; color: var(--vdl-lab-staff); }
+  .vdl-author-legend .lab-student { font-style: italic; color: var(--vdl-lab-student); }
+</style>

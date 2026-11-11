@@ -1,0 +1,17 @@
+# Lab members highlighted in publication author lists.
+# Content rule: list only people who have opted in (the same people as the Team page).
+#
+# role: faculty or staff (bold, ODU blue) | student (italic, second color)
+# last: last name exactly as it appears in BibTeX
+# first: every form of the first name used in BibTeX (full name, initial)
+#
+# Role is the person's current role. [TODO: Katie] decide whether alumni keep the student style on papers from their student years.
+
+- last: Smith
+  first: [Katherine, K.]
+  role: faculty
+
+# [TODO: Katie] add opted-in faculty, staff and students, for example:
+# - last: Lastname
+#   first: [Firstname, F.]
+#   role: student
