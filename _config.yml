@@ -359,7 +359,7 @@ scholar:
   details_dir: bibliography
   details_link: Details
 
-  query: "@*"
+  query: "@*[year>=2026]" # lab publications from the lab's founding in 2026 onward; papers.bib can hold the full CV export
   group_by: year
   group_order: descending
 

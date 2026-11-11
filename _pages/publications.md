@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description: "Publications in reverse chronological order."
+description: "Publications by lab members since the lab's founding in 2026, newest first."
 nav: true
 nav_order: 2
 ---
