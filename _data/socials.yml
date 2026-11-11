@@ -1,0 +1,5 @@
+# Social links shown on the home page. See https://github.com/george-gca/jekyll-socials
+# [TODO: Katie] Add a lab contact email when one exists, for example:
+# email: lab@odu.edu
+github_username: vdl-odu
+rss_icon: false
